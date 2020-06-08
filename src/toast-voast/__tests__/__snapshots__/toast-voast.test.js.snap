@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Main Toast Components Toast container should render correctly 1`] = `
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
+`;
+
+exports[`Testing Main Toast Components Toast should render correctly with no props 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "setValues": [Function],
+      "state": Object {
+        "toastElements": Array [],
+      },
+    }
+  }
+>
+  <ToastConsumer
+    actionPrefetch={true}
+    bgColor="#333"
+    closeButtonImageSrc="images/close.svg"
+    height={30}
+    hideOnRouteChange={true}
+    isTestEnv={true}
+    padding={10}
+    position="topLeft"
+    textAlignment="center"
+    textColor="#ffffff"
+    timeout={0}
+  />
+</ContextProvider>
+`;
