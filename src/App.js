@@ -3,7 +3,7 @@ import { toastConfig } from './toast-voast';
 
 function App() {
   useEffect(()=> {
-    //toastConfig.success('Success Case', {height: 100});
+    toastConfig.success('Success Case', {height: 50, position: 'bottomLeft'});
   }, [])
 
   const handleClick = () => {

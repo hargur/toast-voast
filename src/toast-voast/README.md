@@ -1,6 +1,6 @@
 -   @description 
     Very simple React Toast library/module. Returns a list of Toasts being used on a particular page
--   @Pre-requisites: Modules like React, ReactDom, Router(react-router-dom, styled-components) and file for helper methods bing used globally from utils
+-   @Pre-requisites: Modules like React, ReactDom, Router(react-router-dom with BrowserRouter , styled-components) and file for helper methods bing used globally from utils
 -   Note: Needs to be mentioned at App level at once line eg: if you need to provide position 'bottomLeft' to all the children toasts then <Toast position='bottomLeft'/>
 -   Whatever props will be passed to it will be default values for children
 -   To call the Toast on any event use: toastConfig function and import it from

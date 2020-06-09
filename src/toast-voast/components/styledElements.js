@@ -72,6 +72,11 @@ export const StyledAnchor = styled.a`
     width: 100%;
 `;
 
+/* Styling anchors for link/navigation for the toast */
+export const StyledPara = styled.p`
+    margin: 0
+`;
+
 /* Styling inner div when no links */
 export const StyledInnerDiv = styled.div`
     color: ${props => props.textColor};
