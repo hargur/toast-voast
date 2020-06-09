@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 
 // Components
 import { toastConfig } from './ToastConsumer';
-import { StyledAnchor, StyledButton, StyledDiv, StyledInnerDiv } from './styledElements';
+import { StyledAnchor, StyledButton, StyledDiv, StyledInnerDiv, StyledPara } from './styledElements';
 
 // Importing styling
 import '../style.css';
@@ -56,11 +56,9 @@ const ToastContainer = props => {
 
     useEffect(
      () => {
-            // Removing the element from main list of toasts
-            return () => {
-                if (!animateIn) {
-                setTimeout(() => toastConfig.close(id), 500);
-            }
+        // Removing the element from main list of toasts
+        if (!animateIn) {
+            setTimeout(() => toastConfig.close(id), 500);
         }
       },
         // eslint-disable-next-line
@@ -93,13 +91,13 @@ const ToastContainer = props => {
             )}
             {animateIn && !actionHref && !onClickAction && (
                 <StyledInnerDiv padding={padding} textColor={textColor}>
-                    {innerChildren ? innerChildren : <p>{message}</p>}
+                    {innerChildren ? innerChildren : <StyledPara>{message}</StyledPara>}
                 </StyledInnerDiv>
             )}
             {actionHref ? (
                 <Link prefetch={actionPrefetch} href={actionHref} as={actionLinkAs}>
                     <StyledAnchor padding={padding} textColor={textColor} title={actionHref}>
-                        {animateIn && (innerChildren ? innerChildren : <p>{message}</p>)}
+                        {animateIn && (innerChildren ? innerChildren : <StyledPara>{message}</StyledPara>)}
                     </StyledAnchor>
                 </Link>
             ) : (
@@ -110,7 +108,7 @@ const ToastContainer = props => {
                         padding={padding}
                         textColor={textColor}
                     >
-                        {animateIn && (innerChildren ? innerChildren : <p>{message}</p>)}
+                        {animateIn && (innerChildren ? innerChildren : <StyledPara>{message}</StyledPara>)}
                     </StyledButton>
                 )
             )}
